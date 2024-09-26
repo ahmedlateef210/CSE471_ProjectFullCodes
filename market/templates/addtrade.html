@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+    Add Trade Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-addtrade" style="color:white">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Add a Trade
+            </h1>
+            <br>
+            {{ form.isbn.label() }}
+            {{ form.isbn(class="form-control", placeholder="Trade ISBN") }}
+
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Trade Name") }}
+
+            {{ form.description.label() }}
+            {{ form.description(class="form-control", placeholder="Description") }}
+
+            {{ form.owner.label() }}
+            {{ form.owner(class="form-control", placeholder="User ID") }}
+
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    Add Restaurant Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-addtoinventory" style="color:white">
+            {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Add to Inventory
+            </h1>
+            <br>
+            {{ form.isbn.label() }}
+            {{ form.isbn(class="form-control", placeholder="Book ISBN") }}
+
+            {{ form.name.label() }}
+            {{ form.name(class="form-control", placeholder="Book Name") }}
+
+            {{ form.description.label() }}
+            {{ form.description(class="form-control", placeholder="Description") }}
+
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}
